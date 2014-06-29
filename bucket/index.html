@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<meta name="keywords" content="Retro, 90s, music, oldies, old school, classic rock, hip-hop, one hit wonders, rap, jam">
+<meta name="description" content="This is the place to post your favorite old his from the 90s to the early 70s, I call it bucketlist because its songs that you will listen to til you kick the bucket">
+<title>Retro Bucketlist</title>
+
+<!-- stylesheets -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bucketStyles.css">
+
+<!-- fonts -->
+
+
+<!--ember libraries -->
+<script src="js/jquery.js"></script>
+<script src="js/handlebars.js"></script>
+<script src="js/ember.js"></script>
+<script src="js/ember-data.js"></script>
+<script src="js/ember-LS.js"></script>
+
+
+<!-- my js code -->
+<script src="js/application.js"></script>
+<script src="js/model/nine.js"></script>
+<script src="js/controllers/nineController.js"></script?
+<script src="js/model/eight.js"></script>
+</head>
+
+<body>
+
+<script type="text/x-handlebars" data-template-name="application">
+
+<section class="noslider">
+<img src="images/buckLogo.png" class="logo" alt="Retro Bucketlist" />
+</section>
+
+<header class="col-md-5 col-md-push-5">
+  <ul id="menu">
+    {{#link-to 'index' tagName="li"}}Home{{/link-to}}
+    {{#link-to 'nine' tagName="li"}}90s{{/link-to}}
+    {{#link-to 'eight' tagName="li"}}80s{{/link-to}}
+    {{#link-to 'seven' tagName="li"}}70s{{/link-to}}
+  </ul>
+</header>
+
+
+<section id="home" class="col-md-push-9">
+  {{outlet}}
+</section>
+
+</script>
+
+<script type="text/x-handlebars" data-template-name="index">
+
+<h1>"Can You Dig It?"</h1>
+
+<p>Which songs from this millennium will you listen to til the day you die?
+Can you remember? No worries, we got you covvered. Visits the 90s, 80s and 70s pages to add or look up songs from the era. Have fun groovin to the music!
+</p>
+
+</script>
+
+<script type="text/x-handlebars" data-template-name="nine">
+<section class="col-md-7 songs">
+<h1>"Booyak!"</h1>
+  <ul>{{#each}}
+  <li><span class="title">{{songName}}</span> - {{songArtist}}</li>
+  {{/each}}
+  {{songName}}-{{songArtist}}
+  </ul>
+</section>
+
+<section class="col-md-4">
+<form class="addList">
+<h3>Add to the List</h3>
+<label for="sname">Song Name</label>
+{{input value=songName placeholder="song name"}}
+
+<label for="sname">Artist</label>
+{{input value=songArtist placeholder="song artist"}}
+
+<button {{action "addSong" }} class="btn button">Add</button>
+</form>
+
+</section>
+
+</script>
+
+<script type="text/x-handlebars" data-template-name="eight">
+
+<section class="col-md-7 songs">
+<h1>"Gnarly..."</h1>
+<ul>{{#each}}
+<li><span class="title">{{songNameE}}</span> - {{songArtistE}}</li>
+  {{/each}}
+  {{songNameE}}-{{songArtistE}}
+  </ul>
+</section>
+
+<section class="col-md-4">
+<form class="addList">
+<h3>Add to the List</h3>
+<label for="sname">Song Name</label>
+{{input value=songNameE placeholder="song name"}}
+
+<label for="sname">Artist</label>
+{{input value=songArtistE placeholder="song artist"}}
+
+<button {{action "addESong" }} class="btn button">Add</button>
+</form>
+
+</section>
+</script>
+
+<script type="text/x-handlebars" data-template-name="seven">
+
+<section class="col-md-7 songs">
+<h1>"Far Out"</h1>
+<ul>{{#each}}
+<li><span class="title">{{songNameS}}</span> - {{songArtistS}}</li>
+  {{/each}}
+  {{songNameS}}-{{songArtistS}}
+  </ul>
+</section>
+
+<section class="col-md-4">
+<form class="addList">
+<h3>Add to the List</h3>
+<label for="sname">Song Name</label>
+{{input value=songNameS placeholder="song name"}}
+
+<label for="sname">Artist</label>
+{{input value=songArtistS placeholder="song artist"}}
+
+<button {{action "addSSong" }} class="btn button">Add</button>
+</form>
+
+</section>
+</script>
+
+
+</body>
+</html>

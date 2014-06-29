@@ -1,0 +1,15 @@
+{
+	"devDependencies":{
+	  "gulp-concat": "~2.2.0",
+      "gulp-uglify": "~0.2.1",
+      "gulp-jshint": "~1.5.1",
+      "gulp": "~3.8.2",
+      "gulp-sass": "*",
+      "gulp-watch": "*",
+      "gulp-livereload": "*",
+      "gulp-jade":"*"
+	},
+	"bin": {
+    "handlebars": "bin/handlebars"
+  }
+}

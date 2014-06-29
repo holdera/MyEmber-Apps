@@ -1,0 +1,96 @@
+$retro: #fff;
+$color: #f7f5ee;
+$back : #000;
+$blue: #babab6;
+
+body{
+	background:$back url('/images/noslide.png') repeat-x;
+	color:$retro;
+	font-size:1.6em;
+	list-style-type:none;
+	h1{
+	font-size:1.9em;
+	}
+}
+
+.logo{
+	display: block;
+	margin-right:auto;
+	margin-left:auto;
+	margin-top:60px;
+	margin-bottom:20px;
+}
+
+.noslider{
+	height:308px;
+}
+
+header{
+	ul{
+		opacity: 1;
+		font-family: 'Helvetica', sans-serif;
+		font-size:1.6em;
+		font-weigth:700;
+		text-transform:uppercase;
+		text-align:center;
+		margin:2% 0 0 0;
+	}
+	li{
+		cursor:pointer;
+		display:inline-block;
+		padding:5px 9px;
+	}
+	li:hover{
+		color:$color;
+	}
+}
+
+#home{
+	margin: 70px auto 20px auto;
+	padding:20px;
+	display:block;
+	height:400px;
+	width:650px;
+	border-radius:23px;
+	background:$back;
+	 opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+	label {
+		display:block;
+		padding: 5px 0;
+		text-transform:uppercase;
+	}
+	.button{
+		background-color:$back;
+		font-weight:700;
+		border: $retro solid thin;
+		text-transform:uppercase;
+		display:block;
+		margin:20px 0;
+	}
+	.button:hover{
+		background-color:$retro;
+		color:$back;
+	}
+	p{font-size:1.3em;}
+}
+
+.songs{
+	ul{
+		list-style-type:none;
+	}
+	.title{
+		color:$blue;
+	}
+	form{
+		margin:50px 0;
+	}
+}
+
+.addList{
+	input[type="text"]{
+	color:$back;
+	border:none;
+	border-radius: 3px;
+	}
+}
